@@ -1,0 +1,20 @@
+(Log):  Simulator using config file configs/config_1.properties
+(Log):  Processes: x
+(Log):  Trace for process x(0): [Syscall_Exit]
+(Log):  PageBytesLog2: 3
+(Log):  FrameCountLog2: 1
+(Log):  PageCountLog2: 5
+(Log):  LevelOnePTEntryCountLog2: 0
+(Info): CPU 0 going idle at time 0.
+(Info): Advancing time to 1
+(Info): Starting Process x(0) at time 1.
+(Info): Dispatching Process x(0) at time 1 with quantum 4.
+(Info): Translating (instruction) virtual address 0x0
+P2 (hex): 0x0P1(base 10): 0
+(Log):  CPU 0 Xlation Fault: page 0
+(Info): Instruction page fault at 0x0 in process 0 (page number 0)
+Exception in thread "CPU 0" java.lang.IllegalStateException: Implement pageFaultInstruction
+	at os.OS.pageFaultInstruction(OS.java:265)
+	at simulator.Simulator.pageFaultInstruction(Simulator.java:553)
+	at simulator.CPUBase.run(CPUBase.java:77)
+	at java.lang.Thread.run(Thread.java:680)
